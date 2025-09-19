@@ -1,0 +1,33 @@
+@font-face {
+    font-family: AppleGaramond;
+    src: url('./Fonts/apple_garamond/AppleGaramond-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: Urban Shadow;
+    src: url('./Fonts/urban_shadow_sans_serif/Urban\ Shadow\ Sans\ Serif.otf') format('opentype');
+}
+
+.main {
+    background-color: #caba9c;
+}
+
+.hero-image {
+    max-width: 100%;
+}
+
+.h1 {
+    font-family: "Urban Shadow", sans-serif;
+}
+
+/* Volunteer/Guest button area on landing page*/
+.VG-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.VG-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
