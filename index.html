@@ -1,119 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Morten was here -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="stylesheet.css">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
-    <title>Repair Cafe - Who are you?</title>
+  <title>Repair Cafe - Who are you?</title>
 </head>
 <body class="main">
-    <header>
-
+    <header class="site-header">
+        <div class="header-left">
+            <button class="burger" id="burger">&#9776;</button>
+            <img src="./Images/logo.png" alt="Repair cafe logo" class="hero-image">
+        </div>
     </header>
 
-    <main class="main">
-        <img src="" alt="" class="hero-image">
+    <!-- Side panel -->
+    <nav class="side-panel" id="sidePanel">
+        <a  class="highlighted-burger" href="index.html">Home</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="guest.html">Guest</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-        <!-- VG stands for Volunteer/Guest --> 
-        <section class="VG-section">
-            <h1 class="h1">Who are you?</h1>
-            <div class="VG-button-container">
-                <a href="volunteer.html" class="button_circle">Volunteer</a>
-                <a href="guest.html" class="button_circle">Guest</a>
-            </div>
-        </section>
+    <!-- Overlay for closing -->
+    <div class="overlay" id="overlay"></div>
 
-        <div>
-            <h1 class="h1">Find out more</h1>
+  <main>
+    <!-- Volunteer/Guest choice --> 
+    <h1 class="color-h2">Who are you?</h1>
+    <section class="VG-section">
+      <div class="VG-button-container">
+        <a href="volunteer.html" class="button_circle">Volunteer</a>
+        <a href="guest.html" class="button_circle">Guest</a>
+      </div>
+    </section>
+    <!-- Weekly highlight -->
+    <section class="highlight-section">
+      <h2 class="h2">Weekly highlight</h2>
+      <div class="highlight-card">
+        <img src="./Images/weekly Highlight.png" alt="Weekly highlight image"><br>
+        <p>The viral game Subway Surfers creator seen at local Repair Cafe patching hole in sock.</p>
+        <a href="">Read more</a>
+      </div>
+    </section>
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+    <!-- News carousel -->
+    <section class="article-section">
+      <h2 class="h2">Read our news!</h2>
+      <div class="carousel">
+        <div class="card">
+          <p>Local students repair wheelchair after insurance company denies claim.</p>
+          <img src="./Images/wheelchair.jpg" alt="wheelchair">
+          <a href="">Read more</a>
         </div>
-
-        <section class="highlight-section">
-            <div>
-                <h2 class="h2">Weekly highlight</h2>
-                <div>
-                    <img src="" alt="Weekly highlight image" >
-                    <a href="">Read more</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="article-section">
-            <h2 class="h2">Read our news!</h2>
-            <div class="carousel">
-                <div class="card">
-                    <p>Article 1</p>
-                    <img src="" alt="News image" >
-                    <a href="">Read more</a>
-                </div>
-
-                <div class="card">
-                    <p>Article 2</p>
-                    <img src="" alt="News image" >
-                    <a href="">Read more</a>
-                </div>
-
-                <div class="card">
-                    <p>Article 2</p>
-                    <img src="" alt="News image" >
-                    <a href="">Read more</a>
-                </div>
-            </div>
-        </section>
-
-        <div>
-            <h2 class="color-h2">Numbers don't lie.</h2>
+        <div class="card">
+          <p>Repairing toy guns requires license now as per new EU regulations.</p>
+          <img src="./Images/nerf gun.jpg" alt="toy guns">
+          <a href="">Read more</a>
         </div>
-        <section class="sustainability-section">
-        <div>
-            <p>We have fixed or found errors in 40466 things:</p>
+        <div class="card">
+          <p>Local woman breaks stapler - Leaves volunteers bafled.</p>
+          <img src="./Images/stapler.jpg" alt="stapler  ">
+          <a href="">Read more</a>
+        </div>
+      </div>
+    </section>
 
-            <section>
-                <div class="sustainability-card">
-                    <p>Electricity: 19016 items</p>
-                </div>
-                <div class="sustainability-card">
-                    <p>Sewing: 10998 items</p>
-                </div>
-                <div class="sustainability-card">
-                    <p>Other: 9401 items</p>
-                </div>
-            </section>
-          </div>            
-        </section>
+    <!-- Numbers section -->
+    <section>
+      <h2 class="color-h2">Numbers don't lie.</h2>
+    </section>
 
-        <section class="sustainability-section">
-            <p>The Repair Cafés in Denmark have looked at 56,618 things in the past 12 months.</p>
-            <div class="sustainability-container">
-                <h1 class="h1">71.33%</h1>
-                <p>of all the things we received  have been fixed</p>
-            </div>
-        </section>
+    <section class="sustainability-section">
+      <p>We have fixed or found errors in 40,466 things:</p>
+      <div class="sustainability-cards">
+        <div class="sustainability-card">Electricity: 19,016 items</div>
+        <div class="sustainability-card">Sewing: 10,998 items</div>
+        <div class="sustainability-card">Other: 9,401 items</div>
+      </div>
+    </section>
 
-        <section class="sustainability-section">
-            <img src="" alt="">
+    <section class="sustainability-section">
+      <p>The Repair Cafés in Denmark have looked at 56,618 things in the past 12 months.</p>
+      <div class="sustainability-container">
+        <h1 class="h1">71.33%</h1>
+        <p>of all the things we received have been fixed</p>
+      </div>
+    </section>
+
+    <section class="sustainability-section sustainability-bg">
+        <div class="sustainability-content">
+            <img src="./Images/Leafy Foot.png" alt="Leafy foot mm feet" class="sustainability-side-img">
+
+            <div class="sustainability-text">
             <p>We have sorted a total of 103,761.07 kg</p>
-            <li>Electricity: 54,549.41 kg</li>
-            <li>Sewing: 7,637.27 kg</li>
-            <li>Other: 32,322.28 kg</li>
-
+            <ul>
+                <li>Electricity: 54,549.41 kg</li>
+                <li>Sewing: 7,637.27 kg</li>
+                <li>Other: 32,322.28 kg</li>
+            </ul>
             <a href="" class="sus-button">Read more</a>
-        </section>
-    </main>
-        
-    <footer class="footer">
-        <div>
-            <p>© 2024 Repair Cafe</p>
-            <a href="">About Us</a>
-            <a href="">Contact Us</a>
-            <div>
-                <a href="">Privacy Policy</a>
-                <a href="">Terms of Use</a>
-                <a href="">Cookie Policy</a>
-                <a href="">Cookie Notice</a>
             </div>
         </div>
+    </section>
+  </main>
 
-    </footer>
+  <footer class="footer">
+  <div class="footer-top">
+
+    <img src="./Images/logo.png" alt="Repair Cafe Logo" class="footer-logo">
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+    <div class="footer-links-main">
+      <a href="#" class="footer-link about-contact">About Us</a>
+      <a href="#" class="footer-link about-contact">Contact Us</a>
+    </div>
+  </div>
+
+  <hr class="footer-sep">
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+  <div class="footer-bottom">
+    <a href="#" class="footer-link">Privacy Policy</a>
+    <a href="#" class="footer-link">Terms of Use</a>
+    <a href="#" class="footer-link">Cookie Policy</a>
+    <a href="#" class="footer-link">Cookie Notice</a>
+  </div>
+
+  <!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+  <div class="social-media-icons">
+    <a href="https://example.com">
+        <img src="./Images/facebook.png" alt="facebook logo">
+    </a>
+    <a href="https://example.com">
+        <img src="./Images/instagram.png" alt="instagram logo">
+    </a>
+    <a href="https://example.com">
+        <img src="./Images/twitter.png" alt="twitter logo">
+    </a>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const sidePanel = document.getElementById('sidePanel');
+  const overlay = document.getElementById('overlay');
+
+  burger.addEventListener('click', () => {
+    sidePanel.style.left = '0';
+    overlay.style.display = 'block';
+  });
+
+  overlay.addEventListener('click', () => {
+    sidePanel.style.left = '-100%';
+    overlay.style.display = 'none';
+  });
+</script>
+
 </body>
 </html>
