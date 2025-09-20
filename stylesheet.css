@@ -2,6 +2,7 @@
     font-family: AppleGaramond;
     src: url('./Fonts/apple_garamond/AppleGaramond-Bold.ttf') format('truetype');
 }
+
 @font-face {
     font-family: Urban Shadow;
     src: url('./Fonts/urban_shadow_sans_serif/Urban\ Shadow\ Sans\ Serif.otf') format('opentype');
@@ -11,7 +12,7 @@
     background-color: #caba9c;
 }
 
-.hero-image {
+ .hero-image {
     max-width: 100%;
 }
 
@@ -22,6 +23,13 @@
 
 .h2 {
     font-family: "Urban Shadow", sans-serif;
+}
+
+.color-h2 {
+    font-family: "Urban Shadow", sans-serif;
+    color: #4e6c34;
+    text-align: left;
+    margin: 30px;
 }
 
 /* Volunteer/Guest button area on landing page*/
@@ -54,20 +62,49 @@
     border-radius: 15px;
 }
 
-/* Sustainability section */
+/*==== ==== ==== Sustainability section ==== ==== ====*/
 .sustainability-section {
     margin: 20px;
     padding: 20px;
     background-color: #4e6c34;
     border-radius: 15px;
+    color: white;
 }
 
+.sus-button {
+    text-align: right;
+}
+
+.sustainability-card {
+    background-color: #caba9c;
+    margin: 10px;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: "AppleGaramond", sans-serif;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.sustainability-container {
+    text-align: center;
+    background-color: #caba9c;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+}
+
+/* ==== ==== ==== Buttons ==== ==== ==== */
+
+/* Buttons */
 .button {
     margin-top: 25px;
     display: inline-block;
     padding: 10px 20px;
     background-color: #8fb339;
-    color: black;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
     font-family: "Urban Shadow", sans-serif;
@@ -86,3 +123,71 @@
     color: white;
     font-weight: bold;
 }
+
+.button_square {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    background-color: #8fb339;
+    color: white;
+    font-weight: bold;
+}
+
+/* ==== ==== ==== Carousel ==== ==== ==== */
+
+.article-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Carousel container */
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+}
+
+/* Hide scrollbar */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Cards */
+.card {
+    flex: 0 0 250px; 
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    scroll-snap-align: start;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background: #4CAF50;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.card a:hover {
+    background: #388E3C;
+    }
