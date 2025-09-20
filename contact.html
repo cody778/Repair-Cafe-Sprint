@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repair Café Denmark</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* CSS Classes for Styling */
+        .demo-form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-control:required {
+            border-left: 3px solid #dc3545;
+        }
+
+        .form-control:focus {
+            border-color: #007BFF;
+            outline: none; /* Remove default border */
+        }
+
+        .form-control:valid {
+            border-left: 3px solid #28a745;
+        }
+
+        .form-control textarea {
+            max-width: 100%; 
+            height: 100px;
+            resize: vertical;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Radio Buttons: Horizontal Layout */
+        .radio-group {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            margin-left: -10px;
+        }
+
+        /* Checkbox: Horizontal Layout */
+        .checkbox-group {
+            display: flex;
+            align-items: baseline;
+            margin-top: 5px;
+        }
+
+        .checkbox-group label {
+            font-weight: normal;
+            margin-left: 5px;
+        }
+
+        /* Shared styling for radio and checkbox inputs */
+        .radio-control,
+        .checkbox-control {
+            margin: 0;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .btn-submit {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-reset {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+  <h1>CONTACT YOUR LOCAL REPAIR CAFE</h1>
+  <h2>If your inquiry concerns a repair or you would like to contact one of the local branches, you should write to them directly.
+     You can find contact information for all Danish Repair Cafes here:<a href="https://repaircafedanmark.dk/repair-cafeer-i-danmark/">https://repaircafedanmark.dk/repair-cafeer-i-danmark/</a></h2>
+  <h1>REPAIR CAFE DENMARK - BOARD OF DIRECTORS AND MAIN ORGANIZATION</h1><br>
+  <h2>Please contact us if you have any questions or good ideas. The easiest way to do this is to fill out the form below. 
+      You can find answers to general questions here:<a href="https://repaircafedanmark.dk/faq/">FAQ</a>.</h2>
+
+      <form class="demo-form" id="demoForm">
+        <!-- Full Name (autofocus) -->
+        <div class="form-group">
+            <label for="demo-name">Full Name*</label>
+            <input type="text" id="demo-name" class="form-control" autofocus required>
+        </div>
+
+        <!-- Email (required, pattern) -->
+        <div class="form-group">
+            <label for="demo-email">Email*</label>
+            <input type="email" id="demo-email" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        </div>
+
+    <!-- Phone Number (optional, pattern) -->
+        <div class="form-group">
+            <label for="demo-phone">Phone Number</label>
+            <input type="tel" id="demo-phone" class="form-control" pattern="[0-9]{8}">
+        </div>
+
+    <!-- City you live in (autofocus, pattern) -->
+        <div class="form-group">
+            <label for="demo-city">Which city do you live in?</label>
+            <input type="city" id="demo-phone" class="form-control">
+        </div>
+
+    <!-- Message (autofocus, pattern) -->
+        <div class="form-group">
+            <label for="demo-message">Message</label>
+      <textarea class="form-control" id="message" placeholder="Message"></textarea>
+        </div>
+
+    <p>
+      <input type="checkbox" id="robot">
+      <label for="robot">I'm not a robot</label>
+    </p>
+
+    <p>
+      <button type="submit">SEND</button>
+    </p>
+  </form>
+
+  <h2>Once you have clicked send above, we will automatically receive an email and get back to you as soon as possible.
+     You will also receive a copy of the form sent to the email address you used to fill out the form.
+     If you would like to contact one of our local Repair Cafes instead , you can find their contact information <a href="https://repaircafedanmark.dk/repair-cafeer-i-danmark/">here</a>.</h2>
+
+  <hr>
+
+  <h2>Join the Newsletter</h2>
+  <form>
+    <p>
+      <label for="newsletter-name">Your Name:</label><br>
+      <input type="text" id="newsletter-name" placeholder="Your name here">
+    </p>
+
+    <p>
+      <label for="newsletter-email">Your Email:</label><br>
+      <input type="email" id="newsletter-email" placeholder="Your email here">
+    </p>
+
+    <p>
+      <button type="submit">SEND</button>
+    </p>
+  </form>
+
+  <hr>
+
+  <h2>Find Us On</h2>
+  <ul>
+    <li><a href="#">Facebook</a></li>
+    <li><a href="#">Instagram</a></li>
+    <li><a href="mailto:info@repaircafedenmark.org">Email</a></li>
+  </ul>
+
+</body>
+</html>
