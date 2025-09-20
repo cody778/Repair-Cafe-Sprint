@@ -95,14 +95,6 @@ body.main {
   color: #2c2c2c;
 }
 
-body {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  min-height: 100vh;
-  margin: 0;
-  max-width: 100%;
-}
-
 
 .hero-image {
   display: block;
