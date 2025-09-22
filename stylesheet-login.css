@@ -3,59 +3,132 @@
   font-family: urban shadow;
   src: url('./UrbanshadowSansserif-LVvwy.otf') format('opentype');
 }
+
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #4e6c34; 
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.burger {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.burger:focus {
+  outline: none;
+}
+
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 75%;
+  height: 100%;
+  background: #4e6c34;
+  padding: 60px 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.4);
+  transition: left 0.3s ease;
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.side-panel a {
+  color: white;
+  text-decoration: none;
+  font-size: 36px;
+}
+
+.side-panel a:hover {
+  text-decoration: underline;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 1400;
+}
+
+.highlighted-burger {
+    background-color: #364a24;
+    padding: 6px 6px;
+    border-radius: 6px;
+}
+
+
+/*====    ====    ====    ====    ====    ====    Main CSS    ====    ====    ====    ====    ====    ====*/
+
 body {
   margin: 0;
   /*font-family:"urban shadow", sans-serif;*/
   background-color: #caba9c; /* beige background */
   display: flex;
+  height: 100%;
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;*/
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-
-/* Header bar */
-.header {
-  width: 100%;
-  height: 60px;
-  background-color: #4c6444; /* green bar */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
+main {
+  flex: 1;
 }
 
 .h2{
   font-family: "urban shadow", sans-serif;
 }
 
-.header img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
 .menu-icon {
-  font-size: 24px;
+  font-size: 20px;
   color: white;
   cursor: pointer;
 }
 
 /* Login container */
 .login-container {
-  margin-top: 40px;
+  margin: 40px auto;
+  margin-top: 20px;
   width: 90%;
   max-width: 400px;
   background: transparent;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
 }
 
 .login-container h2 {
-  font-size: 36px;
+  font-size: 20px;
   font-family: "urban shadow", sans-serif;
   font-weight: bold;
   margin-bottom: 10px;
+  margin-top: 80px;
 }
 
 .divider {
@@ -66,23 +139,23 @@ body {
 
 input {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   margin: 10px 0;
   border: none;
   border-radius: 10px;
   background: #fff;
-  font-size: 16px;
+  font-size: 14px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 button {
   width: 100%;
-  padding: 14px;
+  padding: 10px;
   margin-top: 20px;
   border: none;
   border-radius: 20px;
   background-color: #82b458; /* green button */
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -91,31 +164,121 @@ button {
 button:hover {
   background-color: #76a82e;
 }
-@media (max-width: 600px){
-    .header{
-        height: 50px;
-        padding: 0 10px;
-    }
-    .header img{
-        width: 32px;
-        height: 32px;
-        
-    }
+
+/*====    ====    ====    ====    ====    ====    Footer    ====    ====    ====    ====    ====    ====*/
+.footer {
+  background: #4e6c34;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.footer-top {
+  display: flex;
+  align-items: flex-start; 
+  gap: 12px;
+}
+
+.footer-logo {
+  width: 64px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.footer-links-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer-links-main .about-contact {
+  font-size: 24px;          
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  margin: 6px 0;
+}
+
+.footer-sep {
+  border: 0;
+  height: 1px;
+  background: white;
+  margin: 12px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-bottom .footer-link {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer a { display: inline-block; padding: 4px 0; }
+
+.social-media-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+@media (min-width: 768px){
+ 
     .menu-icon{
-        font-size: 20px;
+        font-size: 24px;
     }
     .login-container{
-        margin-top: 20px;
-        padding: 15px;
+        margin-top: 40px;
+        padding: 20px;
 
     }
     .login-container h2{
-        font-size: 20px;
+        font-size: 36px;
 
     }
     input, button{
-        font-size: 14px;
-        padding: 10px;
+        font-size: 18px;
+        padding: 12px;
     }
+
+    .footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-links-main {
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .footer-sep {
+    display: none;
+  }
+
+  .footer-bottom {
+    margin-left: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    gap: 6px;
+  }
+
+  .footer-bottom .footer-link {
+    font-size: 16px;
+  }
+
 }
+
 
