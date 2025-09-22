@@ -93,6 +93,7 @@ body.main {
   margin: 0;
   font-family: "AppleGaramond", sans-serif;
   color: #2c2c2c;
+
 }
 
 
@@ -405,6 +406,7 @@ section {
 }
 
 section.grid {
+    padding-bottom: 150px;
     margin: 0 15%;
     max-width: 100%;
 }
