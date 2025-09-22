@@ -1,106 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Morten was here -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
-    <title>Repair Cafe - Who are you?</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Repair Cafe - Who are you?</title>
 </head>
-<body>
-    <header>
-
+<body class="main">
+    <header class="site-header">
+        <div class="header-left">
+            <button class="burger" id="burger">&#9776;</button>
+            <a href="index.html">
+                <img src="./Images/logo.png" alt="Repair cafe logo" class="hero-image">
+            </a>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h1>Who are you?</h1>
-            <div class="">
-                <a href="volunteer.html" class="button">Volunteer</a>
-                <a href="guest.html" class="button">Guest</a>
-            </div>
-        </section>
+    <!-- Side panel -->
+    <nav class="side-panel" id="sidePanel">
+        <a  class="highlighted-burger" href="index.html">Home</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="guest.html">Guest</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-        <div>
-            <h1>Find out more</h1>
+    <div class="overlay" id="overlay"></div>
+
+  <main>
+    <!-- Volunteer/Guest choice --> 
+    <h1 class="color-h2">Who are you?</h1>
+    <section class="VG-section">
+      <div class="VG-button-container">
+        <a href="volunteer.html" class="button_circle">Volunteer</a>
+        <a href="guest.html" class="button_circle">Guest</a>
+      </div>
+    </section>
+    <!-- Weekly highlight -->
+    <section class="highlight-section">
+      <h2 class="h2">Weekly highlight</h2>
+      <div class="highlight-card">
+        <img src="./Images/weekly Highlight.png" alt="Weekly highlight image"><br>
+        <p>The viral game Subway Surfers creator seen at local Repair Cafe patching hole in sock.</p>
+        <a href="">Read more</a>
+      </div>
+    </section>
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+    <!-- News carousel -->
+    <section class="article-section">
+      <h2 class="h2">Read our news!</h2>
+      <div class="carousel">
+        <div class="card">
+          <p>Local students repair wheelchair after insurance company denies claim.</p>
+          <img src="./Images/wheelchair.jpg" alt="wheelchair">
+          <a href="">Read more</a>
         </div>
-
-        <section>
-            <div>
-                <h2>Weekly highlight</h2>
-                <div>
-                    <img src="" alt="Weekly highlight image" >
-                    <a href="">Read more</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div>
-                <h2>Read our news!</h2>
-                <div>
-                    <p>Article 1</p>
-                    <img src="" alt="News image" >
-                    <a href="">Read more</a>
-                </div>
-
-                <div>
-                    <p>Article 2</p>
-                    <img src="" alt="News image" >
-                    <a href="">Read more</a>
-                </div>
-
-                <div>
-                    <p>Article 2</p>
-                    <img src="" alt="News image" >
-                    <a href="">Read more</a>
-                </div>
-            </div>
-        </section>
-
-        <div>
-            <h2>Numbers don't lie.</h2>
+        <div class="card">
+          <p>Repairing toy guns requires license now as per new EU regulations.</p>
+          <img src="./Images/nerf gun.jpg" alt="toy guns">
+          <a href="">Read more</a>
         </div>
+        <div class="card">
+          <p>Local woman breaks stapler - Leaves volunteers bafled.</p>
+          <img src="./Images/stapler.jpg" alt="stapler  ">
+          <a href="">Read more</a>
+        </div>
+      </div>
+    </section>
 
-        <section>
-          <div>
-            <p>We have fixed or found errors in 40466 things:</p>
+    <!-- Numbers section -->
+    <section>
+      <h2 class="color-h2">Numbers don't lie.</h2>
+    </section>
 
-            <section>
-                <div>
-                    <p>Electricity: 19016 items</p>
-                </div>
-                <div>
-                    <p>Sewing: 10998 items</p>
-                </div>
-                <div>
-                    <p>Other: 9401 items</p>
-                </div>
-            </section>
-          </div>            
-        </section>
+    <section class="sustainability-section">
+      <p>We have fixed or found errors in 40,466 things:</p>
+      <div class="sustainability-cards">
+        <div class="sustainability-card">Electricity: 19,016 items</div>
+        <div class="sustainability-card">Sewing: 10,998 items</div>
+        <div class="sustainability-card">Other: 9,401 items</div>
+      </div>
+    </section>
 
-        <section>
-            <p>The Repair Cafés in Denmark have looked at 56,618 things in the past 12 months.</p>
-            <div>
-                <P>71.33%</P>
-                <p>of all the things we received  have been fixed</p>
-            </div>
-        </section>
+    <section class="sustainability-section">
+      <p>The Repair Cafés in Denmark have looked at 56,618 things in the past 12 months.</p>
+      <div class="sustainability-container">
+        <h1 class="h1">71.33%</h1>
+        <p>of all the things we received have been fixed</p>
+      </div>
+    </section>
 
-        <section>
-            <img src="" alt="">
+    <section class="sustainability-section sustainability-bg">
+        <div class="sustainability-content">
+            <img src="./Images/Leafy Foot.png" alt="Leafy foot mm feet" class="sustainability-side-img">
+
+            <div class="sustainability-text">
             <p>We have sorted a total of 103,761.07 kg</p>
-            <p>Electricity: 54,549.41 kg</p>
-            <p>Sewing: 7,637.27 kg</p>
-            <p>Other: 32,322.28 kg</p>
+            <ul>
+                <li>Electricity: 54,549.41 kg</li>
+                <li>Sewing: 7,637.27 kg</li>
+                <li>Other: 32,322.28 kg</li>
+            </ul>
+            <a href="" class="sus-button">Read more</a>
+            </div>
+        </div>
+    </section>
+  </main>
 
-            <a href="">Read more</a>
-        </section>
-    </main>
-        
-    <footer>
+  <footer class="footer">
+  <div class="footer-top">
 
-    </footer>
+    <img src="./Images/logo.png" alt="Repair Cafe Logo" class="footer-logo">
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+    <div class="footer-links-main">
+      <a href="#" class="footer-link about-contact">About Us</a>
+      <a href="#" class="footer-link about-contact">Contact Us</a>
+    </div>
+  </div>
+
+  <hr class="footer-sep">
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+  <div class="footer-bottom">
+    <a href="#" class="footer-link">Privacy Policy</a>
+    <a href="#" class="footer-link">Terms of Use</a>
+    <a href="#" class="footer-link">Cookie Policy</a>
+    <a href="#" class="footer-link">Cookie Notice</a>
+  </div>
+
+  <!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+  <div class="social-media-icons">
+    <a href="https://example.com">
+        <img src="./Images/facebook.png" alt="facebook logo">
+    </a>
+    <a href="https://example.com">
+        <img src="./Images/instagram.png" alt="instagram logo">
+    </a>
+    <a href="https://example.com">
+        <img src="./Images/twitter.png" alt="twitter logo">
+    </a>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const sidePanel = document.getElementById('sidePanel');
+  const overlay = document.getElementById('overlay');
+
+  burger.addEventListener('click', () => {
+    sidePanel.style.left = '0';
+    overlay.style.display = 'block';
+  });
+
+  overlay.addEventListener('click', () => {
+    sidePanel.style.left = '-100%';
+    overlay.style.display = 'none';
+  });
+</script>
+
 </body>
 </html>

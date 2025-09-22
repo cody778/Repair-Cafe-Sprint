@@ -6,44 +6,409 @@
     <title>Locations - Repair Cafe</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
-    <main>
-         <div>
-            <img src="" alt="">
+<body class="main">
+     <header class="site-header">
+        <div class="header-left">
+            <button class="burger" id="burger">&#9776;</button>
+            <a href="index.html">
+                <img src="./Images/logo.png" alt="Repair cafe logo" class="hero-image">
+            </a>
         </div>
-        <section>
-            <div>
-                <p>Repair Cafe 1</p>
-                <a href="">More info</a>
-            </div>
-            <div>
-                <p>Repair Cafe 2</p>
-                <a href="">More info</a>
-            </div>
-            <div>
-                <p>Repair Cafe 3</p>
-                <a href="">More info</a>
-            </div>
-            <div>
-                <p>Repair Cafe 4</p>
-                <a href="">More info</a>
-            </div>
-            <div>
-                <p>Repair Cafe 5</p>
-                <a href="">More info</a>
-            </div>
-            <div>
-                <p>Repair Cafe 6</p>
-                <a href="">More info</a>
-            </div>
-        </section>
+    </header>
 
-        <details class="card">
-            <summary>Textile Tools</summary>
-            <p>Includes sewing machine, needles, threads, scissors, thimbles, and measuring tape.</p>
+    <nav class="side-panel" id="sidePanel">
+        <a href="index.html">Home</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="guest.html">Guest</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+<main>
+    <input type="text" id="search" placeholder="Search for a city...">
+
+    <section class="grid">
+        <details>
+            <summary>Repair Cafe Aarhus</summary>
+            <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Aarhus">
+            <p>Friendly space to repair electronics and textiles in Aarhus.</p>
+            <p class="specialisation"><strong>Specialisation:</strong> Electronics & Textiles</p>
+            <div class="info-sections">
+                <div class="info-card">
+                    <p class="info-title">Location</p>
+                    <img src="./Images/locations.jpg" alt="Map of Aarhus" class="info-img">
+                    <p class="info-text">Frederiks Allé 45, Aarhus</p>
+                </div>
+                <div class="info-card">
+                    <p class="info-title">Schedule</p>
+                    <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+                    <p class="info-text">Mon-Fri 10:00-18:00</p>
+                </div>
+            </div>
+            <p class="contact"><strong>Contact:</strong> supportaarhus@repaircafe.dk</p>
+        </details>
+        <details>
+        <summary>Repair Cafe Aalborg</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Aalborg">
+        <p>Community hub for fixing electronics and small appliances in Aalborg.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Electronics & Small Appliances</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Aalborg" class="info-img">
+            <p class="info-text">Boulevarden 12, Aalborg</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Tue-Sat 11:00-17:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supportaalborg@repaircafe.dk</p>
         </details>
 
-    </main>
+        <details>
+        <summary>Repair Cafe Odense</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Odense">
+        <p>Helping locals fix textiles, bikes, and electronics in Odense.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Bicycles & Textiles</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Odense" class="info-img">
+            <p class="info-text">Kongensgade 88, Odense</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Wed-Sun 12:00-18:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supportodense@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Esbjerg</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Esbjerg">
+        <p>A cozy repair space focusing on household items and furniture in Esbjerg.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Furniture & Household Items</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Esbjerg" class="info-img">
+            <p class="info-text">Torvegade 7, Esbjerg</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Sat-Sun 10:00-16:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supportesbjerg@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Randers</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Randers">
+        <p>Volunteer-driven workshop for textiles and computers in Randers.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Computers & Textiles</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Randers" class="info-img">
+            <p class="info-text">Østervold 21, Randers</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Mon-Fri 09:00-15:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supportranders@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Kolding</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Kolding">
+        <p>Helping the Kolding community repair electronics and bicycles.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Electronics & Bicycles</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Kolding" class="info-img">
+            <p class="info-text">Jernbanegade 9, Kolding</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Thu-Sat 11:00-17:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supportkolding@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Silkeborg</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Silkeborg">
+        <p>Repairing textiles and small electronics in the heart of Silkeborg.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Textiles & Small Electronics</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Silkeborg" class="info-img">
+            <p class="info-text">Vestergade 34, Silkeborg</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Mon-Wed 10:00-16:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supportsilkeborg@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Viborg</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Viborg">
+        <p>Volunteer-based repair café in Viborg focusing on bicycles and furniture.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Bicycles & Furniture</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Viborg" class="info-img">
+            <p class="info-text">Sct. Mathias Gade 22, Viborg</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Sat 09:00-14:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supportviborg@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Horsens</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Horsens">
+        <p>Repair Café Horsens helps with electronics and sewing projects.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Electronics & Sewing</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Horsens" class="info-img">
+            <p class="info-text">Søndergade 55, Horsens</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Fri-Sun 12:00-18:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supporthorsens@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Næstved</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Næstved">
+        <p>A repair space in Næstved focusing on household gadgets and textiles.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Household Gadgets & Textiles</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Næstved" class="info-img">
+            <p class="info-text">Ramsherred 3, Næstved</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Mon-Thu 10:00-15:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supportnaestved@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Roskilde</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Roskilde">
+        <p>Repair Café Roskilde offers help with textiles, electronics, and small bikes.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Textiles, Electronics & Bicycles</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Roskilde" class="info-img">
+            <p class="info-text">Algade 72, Roskilde</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Tue-Fri 11:00-17:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supportroskilde@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Hjørring</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Hjørring">
+        <p>Repair Café Hjørring specializes in electronics and furniture.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Electronics & Furniture</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Hjørring" class="info-img">
+            <p class="info-text">Springvandspladsen 5, Hjørring</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Sat-Sun 10:00-15:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supporthjoerring@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Skive</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Skive">
+        <p>A place for Skive locals to repair appliances and bicycles.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Appliances & Bicycles</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Skive" class="info-img">
+            <p class="info-text">Resenvej 11, Skive</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Wed-Sat 12:00-18:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supportskive@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Holbæk</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Holbæk">
+        <p>Repair Café Holbæk specializes in sewing, textiles, and electronics.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Sewing & Electronics</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Holbæk" class="info-img">
+            <p class="info-text">Ahlgade 14, Holbæk</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Mon-Fri 11:00-16:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supportholbaek@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Helsingør</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Helsingør">
+        <p>Repair Café Helsingør offers community-driven fixes for electronics and furniture.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Electronics & Furniture</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Helsingør" class="info-img">
+            <p class="info-text">Stengade 48, Helsingør</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Fri-Sun 10:00-17:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supporthelsingoer@repaircafe.dk</p>
+        </details>
+
+        <details>
+        <summary>Repair Cafe Sønderborg</summary>
+        <img src="./Images/workstation.png" class="card-img" alt="Repair Cafe Sønderborg">
+        <p>Repair Café Sønderborg helps repair electronics and textiles for the local community.</p>
+        <p class="specialisation"><strong>Specialisation:</strong> Electronics & Textiles</p>
+        <div class="info-sections">
+            <div class="info-card">
+            <p class="info-title">Location</p>
+            <img src="./Images/locations.jpg" alt="Map of Sønderborg" class="info-img">
+            <p class="info-text">Perlegade 33, Sønderborg</p>
+            </div>
+            <div class="info-card">
+            <p class="info-title">Schedule</p>
+            <img src="./Images/calendar.png" alt="Clock icon" class="info-img">
+            <p class="info-text">Tue-Sat 11:00-17:00</p>
+            </div>
+        </div>
+        <p class="contact"><strong>Contact:</strong> supportsønderborg@repaircafe.dk</p>
+        </details>
+    </section>
+</main>
     
+  <footer class="footer">
+  <div class="footer-top">
+
+    <img src="./Images/logo.png" alt="Repair Cafe Logo" class="footer-logo">
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+    <div class="footer-links-main">
+      <a href="#" class="footer-link about-contact">About Us</a>
+      <a href="#" class="footer-link about-contact">Contact Us</a>
+    </div>
+  </div>
+
+  <hr class="footer-sep">
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+  <div class="footer-bottom">
+    <a href="#" class="footer-link">Privacy Policy</a>
+    <a href="#" class="footer-link">Terms of Use</a>
+    <a href="#" class="footer-link">Cookie Policy</a>
+    <a href="#" class="footer-link">Cookie Notice</a>
+  </div>
+
+  <!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+  <div class="social-media-icons">
+    <a href="https://example.com">
+        <img src="./Images/facebook.png" alt="facebook logo">
+    </a>
+    <a href="https://example.com">
+        <img src="./Images/instagram.png" alt="instagram logo">
+    </a>
+    <a href="https://example.com">
+        <img src="./Images/twitter.png" alt="twitter logo">
+    </a>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const sidePanel = document.getElementById('sidePanel');
+  const overlay = document.getElementById('overlay');
+
+  burger.addEventListener('click', () => {
+    sidePanel.style.left = '0';
+    overlay.style.display = 'block';
+  });
+
+  overlay.addEventListener('click', () => {
+    sidePanel.style.left = '-100%';
+    overlay.style.display = 'none';
+  });
+</script>
+    
+<script>
+  // Minimal JS for search/filter
+  const searchInput = document.getElementById("search");
+  searchInput.addEventListener("input", e => {
+    const query = e.target.value.toLowerCase();
+    document.querySelectorAll(".grid details").forEach(card => {
+      const city = card.querySelector("summary").textContent.toLowerCase();
+      card.style.display = city.includes(query) ? "" : "none";
+    });
+  });
+</script>
 </body>
 </html>
