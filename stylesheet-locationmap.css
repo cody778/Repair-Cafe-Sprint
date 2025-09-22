@@ -1,0 +1,217 @@
+@font-face {
+  font-family: Urban Shadow;
+  src: url(Repair-Cafe-Sprint/Fonts/urban_shadow_sans_serif/Urban\ Shadow\ Sans\ Serif.otf) format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Apple Garamond';
+    src: url('./Fonts/apple_garamond/AppleGaramond-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    font-family: 'Apple Garamond', 'Times New Roman', serif;
+    font-weight: 400;
+    font-synthesis: none;
+    letter-spacing: 0.02em;
+    margin: 0;
+    padding: 0;
+    background-color: #CBBA9E;
+}
+
+
+.header-container {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4E6C34;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+
+.bookmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+
+.header-container .logo {
+    height: 28px;
+    width: auto;
+    display: block;
+}
+
+
+.navigation-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.nav-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    background: transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    line-height: 0;
+}
+
+
+.nav-login svg {
+    width: 25px;
+    height: 25px;
+    display: block;
+    fill: currentColor;
+}
+
+
+.burger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+
+.burger-menu span {
+    display: block;
+    height: 3px;
+    width: 24px;
+    background: #000;
+    margin: 2px 0;
+    border-radius: 3px;
+}
+
+
+.page-title, .calendar-title {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #000;
+    margin: 0;
+    padding: 20px 12px;
+}
+
+
+h1 {
+    font-family: "Urban Shadow", Arial, sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.divider {
+  width: 390px; 
+  height: 4px;
+  background-color: #4E6C34;
+  margin: auto 20px;
+  border-radius: 2px;
+  display: block;
+  align-self: center;
+}
+
+
+.map-container {
+  position: relative;
+  width: calc(100% - 48px);
+  max-width: 1100px;
+  padding-top: 56.25%;
+  margin: 12px auto 32px;
+  overflow: visible;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid black;
+  min-height: 450px;
+}
+
+
+.map-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+
+.map-search {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 10px auto 8px;
+}
+
+
+.map-search input[type="search"] {
+  flex: 1 1 420px;
+  min-width: 160px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+
+.map-search button {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #4E6C34;
+  background: #4E6C34;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+
+.map-search button[type="button"] {
+  background: transparent;
+  color: #000;
+  border-color: #ccc;
+}
+
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+
+@media (max-width: 520px) {
+  .map-search { padding: 0 12px; gap:6px; }
+  .map-search input[type="search"] { flex-basis: 220px; padding: 8px; }
+  .map-container { width: calc(100% - 28px); padding-top: 60%; }
+}
+

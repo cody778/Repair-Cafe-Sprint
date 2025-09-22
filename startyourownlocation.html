@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Location — Start your own</title>
+  <link rel="stylesheet" href="stylesheet-locationmap.css">
+</head>
+<body>
+  <header id="top" class="header-container">
+    <a href="index.html" title="Go to homepage">
+      <img src="Repair-Cafe-Sprint/photos/Repaircafe_logo_Danmark-700x700.png" alt="Repair CafeLogo" class="logo">
+    </a>
+    <nav class="navigation-links">
+      <a href="login.html.html" class="nav-login" title="Log in">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z"/>
+        </svg>
+      </a>
+      <button class="burger-menu" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+  <main class="page">
+    <h1 class="page-title">Choose your Location</h1>
+    <div class="divider" aria-hidden="true"></div>
+    <form id="mapSearch" class="map-search" role="search" aria-label="Search address on map">
+      <input id="searchInput" type="search" placeholder="Search address or place" aria-label="Search address">
+      <button id="searchBtn" type="submit">Search</button>
+      <button id="resetBtn" type="button" title="Reset map">Reset</button>
+    </form>
+    <div class="map-container">
+      <iframe id="gmapFrame"
+        src="https://www.google.com/maps?q=Repair%20Cafe&output=embed"
+        title="Repair Cafe map"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById('mapSearch');
+      const input = document.getElementById('searchInput');
+      const frame = document.getElementById('gmapFrame');
+      const reset = document.getElementById('resetBtn');
+      const overlay = document.getElementById('mapOverlay');
+
+      // build embed URL using q= (no API key required)
+      function buildEmbedUrl(q) {
+        return 'https://www.google.com/maps?q=' + encodeURIComponent(q) + '&output=embed';
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const val = input.value.trim();
+        if (!val) return;
+        frame.src = buildEmbedUrl(val);
+      });
+
+      // Allow Enter in the input (handled by submit) and provide reset
+      reset.addEventListener('click', function () {
+        input.value = '';
+        frame.src = buildEmbedUrl('Repair Cafe');
+      });
+
+      // Enable map interaction on overlay click
+      overlay.addEventListener('click', function () {
+        this.style.display = 'none';
+        frame.style.pointerEvents = 'auto';
+      });
+    })();
+  </script>
+</body>
+</html>
