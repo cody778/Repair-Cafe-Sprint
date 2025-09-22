@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Volunteer Log In</title>
-  <link rel="stylesheet" href="stylesheet-signup.css">
+  <link rel="stylesheet" href="stylesheet-login.css">
 </head>
 <body>
+
+
+  
   <header class="site-header">
         <div class="header-left">
             <button class="burger" id="burger">&#9776;</button>
@@ -25,34 +28,20 @@
     </nav>
 
     <div class="overlay" id="overlay"></div>
-
-  <main>
-  
+<main>
   <!-- Login form -->
   <div class="login-container">
-    <h2>SIGN UP</h2>
+    <h2>LOG IN</h2>
 
     <div class="divider"></div>
     <form id="loginForm">
       <input type="text" id="username" placeholder="Username" required>
-      <input type="email" id="email" placeholder="Email" required>
       <input type="password" id="password" placeholder="Password" required>
-      <input type="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required>
-      <input type="text" id="repaircafe" name="repaircafe" placeholder="Repair Café" list="cafes" required>
-      <input type="text" id="motivation" placeholder="Motivation" >
-  
-  <datalist id="cafes">
-    <option value="Repair Café Aarhus">
-    <option value="Repair Café Aalborg">
-    <option value="Repair Café Sonderborg">
-    <option value="Repair Café Copenhagen">
-  </datalist>
-
       <button type="submit">Submit</button>
     </form>
   </div>
+</main>
 
-</main>  
   <footer class="footer">
   <div class="footer-top">
 
@@ -87,7 +76,9 @@
   </div>
 </footer>
 
+  <script src="login.js"></script>
 
+  
 <script>
   const burger = document.getElementById('burger');
   const sidePanel = document.getElementById('sidePanel');
@@ -103,7 +94,5 @@
     overlay.style.display = 'none';
   });
 </script>
-
-<script src="login.js"></script>
 </body>
 </html>

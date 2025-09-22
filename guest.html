@@ -6,26 +6,92 @@
     <title>Repair Cafe - Guest Landing Page</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
-    <header> 
-
+<body class="main">
+  <header class="site-header">
+        <div class="header-left">
+            <button class="burger" id="burger">&#9776;</button>
+            <a href="index.html">
+                <img src="./Images/logo.png" alt="Repair cafe logo" class="hero-image">
+            </a>
+        </div>
     </header>
+
+    <!-- Side panel -->
+    <nav class="side-panel" id="sidePanel">
+        <a href="index.html">Home</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a class="highlighted-burger" href="guest.html">Guest</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Overlay for closing -->
+    <div class="overlay" id="overlay"></div>
     
-    <main>
-        <img src="" alt="">
+    <main class="main">
+        <img src="./Images/Repair Café Fairfield.png" alt="People working at a workstation" class="hero-image">
 
         <section>
-            <h2>What do you need?</h2>
-            <div>
-                <img src="" alt="">
+            <h2 class="color-h2">What do you need?</h2>
+            <div class="buttons-container">
+                <div class="button_square" style="background-image: url('./Images/locations.jpg');">
                 <a href="location.html">Find a Repair Cafe</a>
-            </div>
+                </div>
 
-            <div>
-                <img src="" alt="">
+                <div class="button_square" style="background-image: url('./Images/tools.jpg');">
                 <a href="toolbox.html">Toolbox</a>
-
+                </div>
+            </div>
         </section>
     </main>
+    
+  <footer class="footer">
+  <div class="footer-top">
+
+    <img src="./Images/logo.png" alt="Repair Cafe Logo" class="footer-logo">
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+    <div class="footer-links-main">
+      <a href="#" class="footer-link about-contact">About Us</a>
+      <a href="#" class="footer-link about-contact">Contact Us</a>
+    </div>
+  </div>
+
+  <hr class="footer-sep">
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+  <div class="footer-bottom">
+    <a href="#" class="footer-link">Privacy Policy</a>
+    <a href="#" class="footer-link">Terms of Use</a>
+    <a href="#" class="footer-link">Cookie Policy</a>
+    <a href="#" class="footer-link">Cookie Notice</a>
+  </div>
+
+  <!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+  <div class="social-media-icons">
+    <a href="https://example.com">
+        <img src="./Images/facebook.png" alt="facebook logo">
+    </a>
+    <a href="https://example.com">
+        <img src="./Images/instagram.png" alt="instagram logo">
+    </a>
+    <a href="https://example.com">
+        <img src="./Images/twitter.png" alt="twitter logo">
+    </a>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const sidePanel = document.getElementById('sidePanel');
+  const overlay = document.getElementById('overlay');
+
+  burger.addEventListener('click', () => {
+    sidePanel.style.left = '0';
+    overlay.style.display = 'block';
+  });
+
+  overlay.addEventListener('click', () => {
+    sidePanel.style.left = '-100%';
+    overlay.style.display = 'none';
+  });
+</script>
 </body>
 </html>
