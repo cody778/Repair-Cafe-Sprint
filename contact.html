@@ -9,11 +9,31 @@
     <link rel="stylesheet" href="contactstylesheet.css">
 </head>
 <body class ="main">
+  <header class="site-header">
+        <div class="header-left">
+            <button class="burger" id="burger">&#9776;</button>
+            <a href="index.html">
+                <img src="./Images/logo.png" alt="Repair cafe logo" class="hero-image">
+            </a>
+        </div>
+    </header>
 
-  <h1>CONTACT YOUR LOCAL REPAIR CAFE</h1>
+    <!-- Side panel -->
+    <nav class="side-panel" id="sidePanel">
+        <a href="index.html">Home</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="guest.html">Guest</a>
+        <a class="highlighted-burger" href="contact.html">Contact</a>
+        <a href="login.html.">Log In</a> 
+        <a href="signup.html">Become a volunteer</a>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+  <main>
+  <h1 class="color-h2">CONTACT YOUR LOCAL REPAIR CAFE</h1>
   <h2>If your inquiry concerns a repair or you would like to contact one of the local branches, you should write to them directly.
      You can find contact information for all Danish Repair Cafes here:<a href="https://repaircafedanmark.dk/repair-cafeer-i-danmark/">https://repaircafedanmark.dk/repair-cafeer-i-danmark/</a></h2>
-  <h1>REPAIR CAFE DENMARK - BOARD OF DIRECTORS AND MAIN ORGANIZATION</h1><br>
+  <h1 class="color-h2">REPAIR CAFE DENMARK - BOARD OF DIRECTORS AND MAIN ORGANIZATION</h1><br>
   <h2>Please contact us if you have any questions or good ideas. The easiest way to do this is to fill out the form below. 
       You can find answers to general questions here:<a href="https://repaircafedanmark.dk/faq/">FAQ</a>.</h2>
 
@@ -64,7 +84,7 @@
 
   <hr>
 
-  <h2>Join the Newsletter</h2>
+  <h2  class="color-h2">Join the Newsletter</h2>
   <form>
     <p>
       <label for="newsletter-name">Your Name:</label><br>
@@ -83,12 +103,64 @@
 
   <hr>
 
-  <h2>Find Us On</h2>
+  <h2 class="color-h2">Find Us On</h2>
   <ul>
     <li><a href="#">Facebook</a></li>
     <li><a href="#">Instagram</a></li>
     <li><a href="mailto:info@repaircafedenmark.org">Email</a></li>
   </ul>
+  </main>
 
+  
+  <footer class="footer">
+  <div class="footer-top">
+
+    <img src="./Images/logo.png" alt="Repair Cafe Logo" class="footer-logo">
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+    <div class="footer-links-main">
+      <a href="#" class="footer-link about-contact">About Us</a>
+      <a href="#" class="footer-link about-contact">Contact Us</a>
+    </div>
+  </div>
+
+  <hr class="footer-sep">
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+  <div class="footer-bottom">
+    <a href="#" class="footer-link">Privacy Policy</a>
+    <a href="#" class="footer-link">Terms of Use</a>
+    <a href="#" class="footer-link">Cookie Policy</a>
+    <a href="#" class="footer-link">Cookie Notice</a>
+  </div>
+
+  <!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+  <div class="social-media-icons">
+    <a href="https://example.com">
+        <img src="./Images/facebook.png" alt="facebook logo">
+    </a>
+    <a href="https://example.com">
+        <img src="./Images/instagram.png" alt="instagram logo">
+    </a>
+    <a href="https://example.com">
+        <img src="./Images/twitter.png" alt="twitter logo">
+    </a>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const sidePanel = document.getElementById('sidePanel');
+  const overlay = document.getElementById('overlay');
+
+  burger.addEventListener('click', () => {
+    sidePanel.style.left = '0';
+    overlay.style.display = 'block';
+  });
+
+  overlay.addEventListener('click', () => {
+    sidePanel.style.left = '-100%';
+    overlay.style.display = 'none';
+  });
+</script>
+  
 </body>
 </html>

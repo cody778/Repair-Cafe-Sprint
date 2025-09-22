@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <header id="top" class="header-container">
+  <!--<header id="top" class="header-container">
     <a href="index.html" title="Go to homepage">
       <img src="photos/Repaircafe_logo_Danmark-700x700.png" alt="Repair CafeLogo" class="logo">
     </a>
@@ -20,8 +20,30 @@
       </a>
       <button class="burger-menu" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
     </nav>
-  </header>
+  </header>-->
 
+      <header class="site-header">
+        <div class="header-left">
+            <button class="burger" id="burger">&#9776;</button>
+            <a href="index.html">
+                <img src="./Images/logo.png" alt="Repair cafe logo" class="hero-image">
+            </a>
+        </div>
+    </header>
+
+    <!-- Side panel -->
+    <nav class="side-panel" id="sidePanel">
+        <a href="index.html">Home</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="guest.html">Guest</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html.">Log In</a> 
+        <a href="signup.html">Become a volunteer</a>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+  <main>
   <h1 class="calendar-title">Select your opening days</h1>
   <div class="divider"></div>
   <div class="month-bar">
@@ -35,13 +57,67 @@
     <button id="nextMonth" class="month-arrow" aria-label="Next month">›</button>
   </div>
 
-  <main class="calendar-wrap">
+  <div class="calendar-wrap">
     <div id="daysGrid" class="days-grid" aria-label="Select opening days"></div>
     <div class="actions">
       <button id="clearDays" class="btn">Clear</button>
       <button id="saveDays" class="btn primary">Save</button>
     </div>
-  </main>
+  </div>
+</main>
+
+  
+  <footer class="footer">
+  <div class="footer-top">
+
+    <img src="./Images/logo.png" alt="Repair Cafe Logo" class="footer-logo">
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+    <div class="footer-links-main">
+      <a href="#" class="footer-link about-contact">About Us</a>
+      <a href="#" class="footer-link about-contact">Contact Us</a>
+    </div>
+  </div>
+
+  <hr class="footer-sep">
+<!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+  <div class="footer-bottom">
+    <a href="#" class="footer-link">Privacy Policy</a>
+    <a href="#" class="footer-link">Terms of Use</a>
+    <a href="#" class="footer-link">Cookie Policy</a>
+    <a href="#" class="footer-link">Cookie Notice</a>
+  </div>
+
+  <!-- Don't forget to insert links retard    ====    ====    ====    ====    ====   ====     ====    ====    ====    ====-->
+  <div class="social-media-icons">
+    <a href="https://example.com">
+        <img src="./Images/facebook.png" alt="facebook logo">
+    </a>
+    <a href="https://example.com">
+        <img src="./Images/instagram.png" alt="instagram logo">
+    </a>
+    <a href="https://example.com">
+        <img src="./Images/twitter.png" alt="twitter logo">
+    </a>
+  </div>
+
+
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const sidePanel = document.getElementById('sidePanel');
+  const overlay = document.getElementById('overlay');
+
+  burger.addEventListener('click', () => {
+    sidePanel.style.left = '0';
+    overlay.style.display = 'block';
+  });
+
+  overlay.addEventListener('click', () => {
+    sidePanel.style.left = '-100%';
+    overlay.style.display = 'none';
+  });
+</script>
 
   <script>
     (function () {
