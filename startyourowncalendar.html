@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Select opening days</title>
+  <link rel="stylesheet" href="stylesheet-calendar.css">
+</head>
+<body>
+  <header id="top" class="header-container">
+    <a href="index.html" title="Go to homepage">
+      <img src="photos/Repaircafe_logo_Danmark-700x700.png" alt="Repair CafeLogo" class="logo">
+    </a>
+    <nav class="navigation-links">
+      <a href="login.html.html" class="nav-login" title="Log in">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z"/>
+        </svg>
+      </a>
+      <button class="burger-menu" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <h1 class="calendar-title">Select your opening days</h1>
+  <div class="divider"></div>
+  <div class="month-bar">
+    <button id="prevMonth" class="month-arrow" aria-label="Previous month">‹</button>
+
+    <div class="month-wrap">
+      <button id="monthLabel" class="month-label" aria-haspopup="listbox" aria-expanded="false">Month</button>
+      <ul id="monthList" class="months-list" role="listbox" aria-label="Months"></ul>
+    </div>
+
+    <button id="nextMonth" class="month-arrow" aria-label="Next month">›</button>
+  </div>
+
+  <main class="calendar-wrap">
+    <div id="daysGrid" class="days-grid" aria-label="Select opening days"></div>
+    <div class="actions">
+      <button id="clearDays" class="btn">Clear</button>
+      <button id="saveDays" class="btn primary">Save</button>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      const MONTHS = [
+        { name: 'January', days: 31 },
+        { name: 'February', days: 28 },
+        { name: 'March', days: 31 },
+        { name: 'April', days: 30 },
+        { name: 'May', days: 31 },
+        { name: 'June', days: 30 },
+        { name: 'July', days: 31 },
+        { name: 'August', days: 31 },
+        { name: 'September', days: 30 },
+        { name: 'October', days: 31 },
+        { name: 'November', days: 30 },
+        { name: 'December', days: 31 }
+      ];
+
+      const grid = document.getElementById('daysGrid');
+      const monthLabel = document.getElementById('monthLabel');
+      const monthList = document.getElementById('monthList');
+      const prevBtn = document.getElementById('prevMonth');
+      const nextBtn = document.getElementById('nextMonth');
+      const saveBtn = document.getElementById('saveDays');
+      const clearBtn = document.getElementById('clearDays');
+      const STORAGE_PREFIX = 'openingDays_month_';
+
+      MONTHS.forEach((m, i) => {
+        const li = document.createElement('li');
+        li.role = 'option';
+        li.tabIndex = 0;
+        li.dataset.index = String(i);
+        li.style.padding = '6px 10px';
+        li.style.cursor = 'pointer';
+        li.style.borderRadius = '6px';
+        li.textContent = m.name;
+        li.addEventListener('click', () => {
+          setMonth(i);
+          hideMonthList();
+        });
+        li.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { setMonth(i); hideMonthList(); e.preventDefault(); }
+        });
+        monthList.appendChild(li);
+      });
+
+      let currentMonth = new Date().getMonth();
+      let selected = new Set();
+
+      function storageKey(monthIndex) {
+        return STORAGE_PREFIX + monthIndex;
+      }
+      function loadSelectedFor(monthIndex) {
+        selected = new Set(JSON.parse(localStorage.getItem(storageKey(monthIndex)) || '[]'));
+      }
+      function saveSelectedFor(monthIndex) {
+        localStorage.setItem(storageKey(monthIndex), JSON.stringify(Array.from(selected)));
+      }
+
+      function buildGridFor(monthIndex) {
+        const days = MONTHS[monthIndex].days;
+        grid.innerHTML = '';
+        for (let i = 1; i <= days; i++) {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'day' + (selected.has(String(i)) ? ' selected' : '');
+          b.textContent = i;
+          b.dataset.day = String(i);
+          b.addEventListener('click', () => {
+            if (b.classList.toggle('selected')) selected.add(b.dataset.day);
+            else selected.delete(b.dataset.day);
+          });
+          grid.appendChild(b);
+        }
+      }
+
+      function refreshMonth(monthIndex) {
+        loadSelectedFor(monthIndex);
+        monthLabel.textContent = MONTHS[monthIndex].name;
+        buildGridFor(monthIndex);
+      }
+
+      function setMonth(idx) {
+        currentMonth = (idx + 12) % 12;
+        refreshMonth(currentMonth);
+      }
+
+      prevBtn.addEventListener('click', () => {
+        setMonth((currentMonth + 11) % 12);
+      });
+      nextBtn.addEventListener('click', () => {
+        setMonth((currentMonth + 1) % 12);
+      });
+      function showMonthList() {
+        monthList.style.display = 'block';
+        monthLabel.setAttribute('aria-expanded', 'true');
+      }
+      function hideMonthList() {
+        monthList.style.display = 'none';
+        monthLabel.setAttribute('aria-expanded', 'false');
+      }
+      monthLabel.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const open = monthList.style.display === 'block';
+        if (open) hideMonthList(); else showMonthList();
+      });
+      document.addEventListener('click', (e) => {
+        if (!monthList.contains(e.target) && e.target !== monthLabel) hideMonthList();
+      });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideMonthList(); });
+
+      saveBtn.addEventListener('click', () => {
+        saveSelectedFor(currentMonth);
+        // navigate back to the "Start Your Own" page after saving
+        window.location.href = 'startyourown.html';
+      });
+      clearBtn.addEventListener('click', () => {
+        selected.clear();
+        grid.querySelectorAll('.day.selected').forEach(x => x.classList.remove('selected'));
+        localStorage.removeItem(storageKey(currentMonth));
+      });
+      setMonth(currentMonth);
+    })();
+  </script>
+</body>
+</html>

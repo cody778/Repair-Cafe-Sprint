@@ -1,0 +1,250 @@
+@font-face {
+    font-family: Urban Shadow;
+    src: url('./Fonts/urban_shadow_sans_serif/Urban\ Shadow\ Sans\ Serif.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root{
+  --gap:10px;
+  --size:56px;
+  --accent:#78c538;
+  --green:#4E6C34;
+  --page-bg: #CBBA9E;
+}
+
+* { box-sizing: border-box; }
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Urban Shadow", Arial, sans-serif;
+  background-color: #CBBA9E;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  font-synthesis: none;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: 0;
+}
+
+.divider {
+    width: 250px;
+    height: 4px;
+    background-color: #4E6C34;
+    margin: 12px auto 20px;
+    border-radius: 2px;
+    display: block;
+}
+
+.header-container {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4E6C34;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.navigation-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.nav-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    background: transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    line-height: 0;
+}
+
+.nav-login svg {
+    width: 25px;
+    height: 25px;
+    display: block;
+    fill: currentColor;
+}
+
+.burger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+
+.burger-menu span {
+    display: block;
+    height: 3px;
+    width: 24px;
+    background: #000;
+    margin: 2px 0;
+    border-radius: 3px;
+}
+
+.calendar-title {
+    font-family: "Urban Shadow", Arial, sans-serif;
+    text-align: center;
+    font-size: 36px;
+    margin: 50px 0 30px;
+}
+
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.days li.active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important;
+}
+
+.calendar-wrap {
+  width: calc(100% - 48px);
+  max-width: 660px;
+  margin: 50px auto 18px;
+  padding: 24px;
+  box-sizing: border-box;
+  background: #b8a382;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(163, 155, 155);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+
+.days-grid{
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap:var(--gap);
+  align-items:stretch;
+}
+
+.day{
+  appearance:none;
+  border:1px solid #e6e6e6;
+  background:#fafafa;
+  height:var(--size);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  border-radius:8px;
+  font-weight:600;
+}
+.day.selected{ background:var(--accent); color:#000; border-color:var(--accent); }
+
+.actions{ display:flex; gap:8px; justify-content:flex-end; margin-top:12px }
+.btn{ padding:8px 12px; border-radius:8px; border:1px solid #ccc; background:#fff; cursor:pointer }
+.btn.primary{ background:var(--accent); border-color:var(--accent) }
+
+
+.months-list,
+.months-list li {
+  font-family: 'Apple Garamond', 'Times New Roman', serif;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+
+.month-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 12px; 
+}
+
+.month-arrow {
+  background: none;
+  border: 0;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.month-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.month-label {
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  min-width: 160px;
+  text-align: center;
+  font-family: 'Apple Garamond', 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.months-list {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 8px);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 6px;
+  display: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  list-style: none;
+  margin: 0;
+  z-index: 100;
+}
+.months-list.show { display: block; }
+
+.months-list li {
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: 'Apple Garamond', 'Times New Roman', serif;
+  font-size: 15px;
+}
+.months-list li:focus { outline: 2px solid rgba(0,0,0,.08); }
+
+.header-container .bookmark img,
+.header-container .logo {
+  height: 30px !important;
+  max-height: 34px !important;
+  width: auto !important;
+  display: inline-block;
+}
